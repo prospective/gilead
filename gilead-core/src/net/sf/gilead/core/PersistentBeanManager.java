@@ -46,7 +46,8 @@ import net.sf.gilead.exception.NotPersistentObjectException;
 import net.sf.gilead.exception.TransientObjectException;
 import net.sf.gilead.util.CollectionHelper;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Manager for Persistent POJO handling
@@ -65,7 +66,7 @@ public class PersistentBeanManager {
 	/**
 	 * Logger channel
 	 */
-	private Logger _log = Logger.getLogger(PersistentBeanManager.class);
+	private Logger _log = LoggerFactory.getLogger(PersistentBeanManager.class);
 
 	/**
 	 * The associated Proxy informations store

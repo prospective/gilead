@@ -11,7 +11,8 @@ import net.sf.beanlib.spi.BeanTransformerSpi;
 import net.sf.beanlib.spi.replicator.MapReplicatorSpi;
 import net.sf.gilead.core.IPersistenceUtil;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Encapsulation of the collection replicator
@@ -49,7 +50,7 @@ public class MergeMapReplicator extends Hibernate3MapReplicator {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(MergeMapReplicator.class);
+	private static Logger _log = LoggerFactory.getLogger(MergeMapReplicator.class);
 
 	/**
 	 * The associated persistence util

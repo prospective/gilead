@@ -13,7 +13,8 @@ import net.sf.gilead.exception.TransientObjectException;
 import net.sf.gilead.proxy.AdditionalCodeManager;
 import net.sf.gilead.proxy.ProxyClassLoader;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.gwt.user.server.rpc.RPCRequest;
 
@@ -29,7 +30,7 @@ public class GileadRPCHelper {
 	/**
 	 * The log channel
 	 */
-	private static Logger log = Logger.getLogger(GileadRPCHelper.class);
+	private static Logger log = LoggerFactory.getLogger(GileadRPCHelper.class);
 
 	// -------------------------------------------------------------------------
 	//

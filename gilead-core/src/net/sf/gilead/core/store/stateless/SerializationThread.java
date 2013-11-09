@@ -13,7 +13,8 @@ import java.util.concurrent.TimeUnit;
 import net.sf.gilead.core.serialization.IProxySerialization;
 import net.sf.gilead.pojo.base.ILightEntity;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Thread for handling proxy information serialization. (Performance purpose)
@@ -27,7 +28,7 @@ public class SerializationThread implements Runnable {
 	/**
 	 * Logger channel
 	 */
-	private static final Logger _log = Logger.getLogger(SerializationThread.class);
+	private static final Logger _log = LoggerFactory.getLogger(SerializationThread.class);
 
 	/**
 	 * Serializer for proxy informations

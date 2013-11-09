@@ -3,15 +3,14 @@
  */
 package net.sf.gilead.core.serialization;
 
-import java.io.Serializable;
-
+import com.google.gwt.user.client.rpc.SerializationException;
 import net.sf.gilead.pojo.gwt.GwtSerializableId;
 import net.sf.gilead.pojo.gwt.IGwtSerializableParameter;
 import net.sf.gilead.pojo.gwt.SerializedParameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import org.apache.log4j.Logger;
-
-import com.google.gwt.user.client.rpc.SerializationException;
+import java.io.Serializable;
 
 /**
  * GWT compatible map serialization. Each basic type is encapsulated as IRequestParameter. Non basic type is serialised
@@ -26,7 +25,7 @@ public class GwtProxySerialization extends GwtSerializer implements IProxySerial
 	/**
 	 * Logger channel
 	 */
-	private static final Logger _log = Logger.getLogger(GwtProxySerialization.class);
+	private static final Logger _log = LoggerFactory.getLogger(GwtProxySerialization.class);
 
 	/**
 	 * String serializer

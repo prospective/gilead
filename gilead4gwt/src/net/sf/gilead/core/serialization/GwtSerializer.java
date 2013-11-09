@@ -3,39 +3,17 @@
  */
 package net.sf.gilead.core.serialization;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
-
+import com.google.gwt.user.client.rpc.SerializationException;
 import net.sf.gilead.pojo.gwt.IGwtSerializableParameter;
-import net.sf.gilead.pojo.gwt.basic.BooleanParameter;
-import net.sf.gilead.pojo.gwt.basic.ByteParameter;
-import net.sf.gilead.pojo.gwt.basic.CharacterParameter;
-import net.sf.gilead.pojo.gwt.basic.DateParameter;
-import net.sf.gilead.pojo.gwt.basic.DoubleParameter;
-import net.sf.gilead.pojo.gwt.basic.FloatParameter;
-import net.sf.gilead.pojo.gwt.basic.IntegerParameter;
-import net.sf.gilead.pojo.gwt.basic.LongParameter;
-import net.sf.gilead.pojo.gwt.basic.ShortParameter;
-import net.sf.gilead.pojo.gwt.basic.StringParameter;
+import net.sf.gilead.pojo.gwt.basic.*;
 import net.sf.gilead.pojo.gwt.collection.ListParameter;
 import net.sf.gilead.pojo.gwt.collection.MapParameter;
 import net.sf.gilead.pojo.gwt.collection.SetParameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import org.apache.log4j.Logger;
-
-import com.google.gwt.user.client.rpc.SerializationException;
+import java.io.Serializable;
+import java.util.*;
 
 /**
  * GWT compatible serialization. Since Object class is not allowed, we replace it with a marker interface and
@@ -50,7 +28,7 @@ public class GwtSerializer {
 	/**
 	 * Logger channel
 	 */
-	private static final Logger _log = Logger.getLogger(GwtSerializer.class);
+	private static final Logger _log = LoggerFactory.getLogger(GwtSerializer.class.getName());
 
 	// ----
 	// Constructor

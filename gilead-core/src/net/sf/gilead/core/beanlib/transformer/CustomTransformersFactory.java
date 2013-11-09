@@ -7,7 +7,8 @@ import java.util.List;
 import net.sf.beanlib.spi.BeanTransformerSpi;
 import net.sf.beanlib.spi.CustomBeanTransformerSpi;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Factory for gilead custom transformers
@@ -21,7 +22,7 @@ public class CustomTransformersFactory {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(CustomTransformersFactory.class);
+	private static Logger _log = LoggerFactory.getLogger(CustomTransformersFactory.class);
 
 	/**
 	 * Singleton instance

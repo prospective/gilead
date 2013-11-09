@@ -14,7 +14,8 @@ import net.sf.gilead.core.annotations.AnnotationsManager;
 import net.sf.gilead.pojo.base.ILightEntity;
 import net.sf.gilead.util.IntrospectionHelper;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Remote loading service
@@ -33,7 +34,7 @@ public class BaseLoadingService<T extends ILightEntity> {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(BaseLoadingService.class);
+	private static Logger _log = LoggerFactory.getLogger(BaseLoadingService.class);
 
 	/**
 	 * The associated bean manager. Default value is defined by the unique instance of the singleton.

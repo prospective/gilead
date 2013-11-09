@@ -26,7 +26,8 @@ import net.sf.gilead.pojo.base.ILightEntity;
 import net.sf.gilead.pojo.base.IUserType;
 import net.sf.gilead.util.IntrospectionHelper;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.ObjectNotFoundException;
@@ -104,7 +105,7 @@ public class HibernateUtil implements IPersistenceUtil {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(HibernateUtil.class);
+	private static Logger _log = LoggerFactory.getLogger(HibernateUtil.class);
 
 	/**
 	 * The pseudo unique instance of the singleton

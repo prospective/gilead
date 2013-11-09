@@ -24,7 +24,8 @@ import net.sf.gilead.core.store.IProxyStore;
 import net.sf.gilead.exception.ProxyStoreException;
 import net.sf.gilead.pojo.base.ILightEntity;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Stateless proxy store. The proxy informations is stored on the pojo, by implementing the ILightEntity interface.
@@ -39,7 +40,7 @@ public class StatelessProxyStore implements IProxyStore {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(StatelessProxyStore.class);
+	private static Logger _log = LoggerFactory.getLogger(StatelessProxyStore.class);
 
 	/**
 	 * Serializer for proxy informations

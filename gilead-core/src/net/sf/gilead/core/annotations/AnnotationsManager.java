@@ -12,7 +12,8 @@ import net.sf.gilead.annotations.ReadOnly;
 import net.sf.gilead.annotations.ServerOnly;
 import net.sf.gilead.util.IntrospectionHelper;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Helper class for annotation management
@@ -26,7 +27,7 @@ public class AnnotationsManager {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(AnnotationsManager.class);
+	private static Logger _log = LoggerFactory.getLogger(AnnotationsManager.class);
 
 	/**
 	 * Annotation map. It is filled with associated Gilead annotation for all classes and properties for performance

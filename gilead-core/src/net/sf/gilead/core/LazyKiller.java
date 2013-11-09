@@ -27,7 +27,8 @@ import net.sf.gilead.core.beanlib.merge.BeanlibThreadLocal;
 import net.sf.gilead.core.beanlib.merge.MergeBeanPopulator;
 import net.sf.gilead.core.store.IProxyStore;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class replaces all "lazy but not loaded" Hibernate association with null to allow the argument POJO to be used
@@ -43,7 +44,7 @@ public class LazyKiller {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(LazyKiller.class);
+	private static Logger _log = LoggerFactory.getLogger(LazyKiller.class);
 
 	/**
 	 * The class mapper

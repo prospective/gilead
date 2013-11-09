@@ -13,7 +13,8 @@ import java.util.Arrays;
 
 import net.sf.gilead.exception.ConvertorException;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Serialization manager singleton. It use JBoss serialization library to convert Serializable to simple byte array and
@@ -29,7 +30,7 @@ public class JBossProxySerialization implements IProxySerialization {
 	/**
 	 * Logger channel.
 	 */
-	private static Logger _log = Logger.getLogger(JBossProxySerialization.class);
+	private static Logger _log = LoggerFactory.getLogger(JBossProxySerialization.class);
 
 	// -------------------------------------------------------------------------
 	//

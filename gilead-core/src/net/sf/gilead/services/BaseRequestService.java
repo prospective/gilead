@@ -10,7 +10,8 @@ import java.util.Map;
 import net.sf.gilead.core.IPersistenceUtil;
 import net.sf.gilead.core.PersistentBeanManager;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Request service implementation.
@@ -29,7 +30,7 @@ public class BaseRequestService {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(BaseRequestService.class);
+	private static Logger _log = LoggerFactory.getLogger(BaseRequestService.class);
 
 	/**
 	 * The associated bean manager. Default value is defined by the unique instance of the singleton.

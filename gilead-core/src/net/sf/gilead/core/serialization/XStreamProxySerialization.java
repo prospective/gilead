@@ -5,7 +5,8 @@ package net.sf.gilead.core.serialization;
 
 import java.io.Serializable;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.thoughtworks.xstream.XStream;
 
@@ -22,7 +23,7 @@ public class XStreamProxySerialization implements IProxySerialization {
 	/**
 	 * Logger channel.
 	 */
-	private static Logger _log = Logger.getLogger(XStreamProxySerialization.class);
+	private static Logger _log = LoggerFactory.getLogger(XStreamProxySerialization.class);
 
 	/**
 	 * The XStream facade

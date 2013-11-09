@@ -29,7 +29,8 @@ import net.sf.gilead.core.store.IProxyStore;
 import net.sf.gilead.pojo.base.ILightEntity;
 import net.sf.gilead.util.IntrospectionHelper;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Populatable for Hibernate lazy handling
@@ -43,7 +44,7 @@ public class ClonePropertyFilter implements DetailedPropertyFilter {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(ClonePropertyFilter.class);
+	private static Logger _log = LoggerFactory.getLogger(ClonePropertyFilter.class);
 
 	/**
 	 * The associated persistence utils

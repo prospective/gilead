@@ -20,7 +20,8 @@ import java.util.Map;
 
 import net.sf.gilead.core.beanlib.IClassMapper;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Class mapper based on package hierarchy (Domain and DTO must have the same name and placed in identified packages)
@@ -34,7 +35,7 @@ public class DirectoryClassMapper implements IClassMapper {
 	/**
 	 * Logger channel
 	 */
-	private static Logger _log = Logger.getLogger(DirectoryClassMapper.class);
+	private static Logger _log = LoggerFactory.getLogger(DirectoryClassMapper.class);
 
 	/**
 	 * The root package of all Domain classes
