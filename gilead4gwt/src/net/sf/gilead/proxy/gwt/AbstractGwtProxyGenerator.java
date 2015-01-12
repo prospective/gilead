@@ -24,8 +24,6 @@ import net.sf.gilead.proxy.xml.AdditionalCodeReader;
 import net.sf.gilead.proxy.xml.Attribute;
 import net.sf.gilead.proxy.xml.Method;
 
-import org.apache.commons.lang.StringUtils;
-
 import com.google.gwt.core.ext.Generator;
 import com.google.gwt.core.ext.GeneratorContext;
 import com.google.gwt.core.ext.TreeLogger;
@@ -158,7 +156,7 @@ public abstract class AbstractGwtProxyGenerator extends Generator {
 
 		// Add implemented interface if needed
 		//
-		if (StringUtils.isEmpty(additionalCode.getImplementedInterface()) == false) {
+		if (additionalCode.getImplementedInterface() != null && additionalCode.getImplementedInterface().length() >0) {
 			composerFactory.addImplementedInterface(additionalCode.getImplementedInterface());
 		}
 
@@ -202,7 +200,7 @@ public abstract class AbstractGwtProxyGenerator extends Generator {
 	protected void generateAttribute(SourceWriter sourceWriter, Attribute attribute) {
 		// Javadoc comment if needed
 		//
-		if (StringUtils.isEmpty(attribute.getJavadoc()) == false) {
+		if (attribute.getJavadoc() != null && attribute.getJavadoc().length() >0) {
 			sourceWriter.beginJavaDocComment();
 			sourceWriter.println(attribute.getJavadoc());
 			sourceWriter.endJavaDocComment();
@@ -218,12 +216,12 @@ public abstract class AbstractGwtProxyGenerator extends Generator {
 	 * Generates an additional attribute
 	 * 
 	 * @param sourceWriter
-	 * @param attribute
+	 * @param method
 	 */
 	protected void generateMethod(SourceWriter sourceWriter, Method method) {
 		// Javadoc comment if needed
 		//
-		if (StringUtils.isEmpty(method.getJavadoc()) == false) {
+		if (method.getJavadoc() != null && method.getJavadoc().length() >0) {
 			sourceWriter.beginJavaDocComment();
 			sourceWriter.println(method.getJavadoc());
 			sourceWriter.endJavaDocComment();
