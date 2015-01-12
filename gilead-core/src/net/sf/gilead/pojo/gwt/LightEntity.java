@@ -16,6 +16,7 @@
 
 package net.sf.gilead.pojo.gwt;
 
+import java.beans.Transient;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -146,6 +147,7 @@ public abstract class LightEntity implements ILightEntity {
 	 * @see net.sf.gilead.pojo.gwt.IRequestParameter#getValue()
 	 */
 	@Override
+    @Transient
 	public Object getUnderlyingValue() {
 		return this;
 	}
